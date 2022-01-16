@@ -1,0 +1,76 @@
+/* sidebar */
+.sidebar {
+    height: 100%; 
+    width: 0;
+    position: fixed; 
+    z-index: 1; /* Place in top */
+    top: 0;
+    left: 0;
+    background-color: rgb(70, 49, 63);
+    overflow-x: hidden; /* Won't Able To Scroll Horizontally */
+    padding-top: 60px; /* content 60px away from top */
+    transition: 0.5s;
+    border-radius: 2px;
+  }
+  
+  /* links */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fdfdfd;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidelinks a:hover {
+    color: #0a0a0a;
+    background-color: white;
+    border-radius: 50px;
+    margin: 5px;
+    font-size: 35px;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+}
+
+/* Change Cross Color When Hovered */
+.sidebar .closebtn:hover {
+    color: red;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    transition: 0.3s;
+    border-radius: 3.4px;
+}
+  
+.openbtn:hover {
+    background-color: rgb(10, 10, 10);
+    color : white;
+    border-radius: 20px;
+
+}
+  
+/* Push Site Content To The Right When Sidebar Opens */
+#main {
+    transition: margin-left .5s; 
+    padding: 20px;
+}
+  
+/* Padding & Margin For Smaller Devices (Less Than 450px) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
